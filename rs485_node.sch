@@ -1,0 +1,331 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny214-SS U2
+U 1 1 61D40EEA
+P 4150 3050
+F 0 "U2" H 3550 3950 50  0000 C CNN
+F 1 "ATtiny214-SS" H 3750 3850 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4150 3050 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40001912A.pdf" H 4150 3050 50  0001 C CNN
+	1    4150 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_UART:ST485EBDR U3
+U 1 1 61D42045
+P 6800 2750
+F 0 "U3" H 6250 3250 50  0000 C CNN
+F 1 "ST485EBDR" H 6400 3150 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6800 1850 50  0001 C CNN
+F 3 "http://www.st.com/resource/en/datasheet/st485eb.pdf" H 6800 2800 50  0001 C CNN
+	1    6800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2750 5650 2750
+Wire Wire Line
+	5650 2750 5650 2950
+Wire Wire Line
+	5650 2950 6400 2950
+Wire Wire Line
+	4750 2850 5550 2850
+Wire Wire Line
+	5550 2850 5550 2650
+Wire Wire Line
+	5550 2650 6400 2650
+Wire Wire Line
+	6400 2850 6300 2850
+Wire Wire Line
+	6300 2850 6300 2750
+Wire Wire Line
+	6300 2750 6400 2750
+Wire Wire Line
+	4750 3050 5750 3050
+Wire Wire Line
+	5750 3050 5750 2750
+Wire Wire Line
+	5750 2750 6300 2750
+Connection ~ 6300 2750
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 61D45F7A
+P 8400 2650
+F 0 "J2" H 8372 2578 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 8372 2533 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 8400 2650 50  0001 C CNN
+F 3 "~" H 8400 2650 50  0001 C CNN
+	1    8400 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:EMI_Filter_LL_1423 FL1
+U 1 1 61D47510
+P 7650 2800
+F 0 "FL1" H 7650 3150 50  0000 C CNN
+F 1 "EMI_Filter_LL_1423" H 7650 3050 50  0000 C CNN
+F 2 "" H 7650 2550 50  0001 C CNN
+F 3 "~" V 7650 2840 50  0001 C CNN
+	1    7650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2700 7250 2700
+Wire Wire Line
+	7250 2700 7250 2650
+Wire Wire Line
+	7250 2650 7200 2650
+Wire Wire Line
+	7450 2900 7250 2900
+Wire Wire Line
+	7250 2900 7250 2950
+Wire Wire Line
+	7250 2950 7200 2950
+Wire Wire Line
+	8200 2750 7950 2750
+Wire Wire Line
+	7950 2750 7950 2700
+Wire Wire Line
+	7950 2700 7850 2700
+Wire Wire Line
+	8200 2850 7950 2850
+Wire Wire Line
+	7950 2850 7950 2900
+Wire Wire Line
+	7950 2900 7850 2900
+$Comp
+L power:GND #PWR08
+U 1 1 61D4C5ED
+P 8250 2350
+F 0 "#PWR08" H 8250 2100 50  0001 C CNN
+F 1 "GND" H 8255 2177 50  0001 C CNN
+F 2 "" H 8250 2350 50  0001 C CNN
+F 3 "" H 8250 2350 50  0001 C CNN
+	1    8250 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2550 8150 2550
+Wire Wire Line
+	8150 2550 8150 2350
+Wire Wire Line
+	8150 2350 8250 2350
+Wire Wire Line
+	8200 2650 8050 2650
+Wire Wire Line
+	8050 2650 8050 2100
+Wire Wire Line
+	4150 2100 4150 2350
+Wire Wire Line
+	6800 2350 6800 2100
+Wire Wire Line
+	6800 2100 5850 2100
+$Comp
+L Device:Ferrite_Bead_Small FB1
+U 1 1 61D4F800
+P 7650 2100
+F 0 "FB1" V 7413 2100 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 7504 2100 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 7580 2100 50  0001 C CNN
+F 3 "~" H 7650 2100 50  0001 C CNN
+	1    7650 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7750 2100 8050 2100
+Wire Wire Line
+	7550 2100 7300 2100
+Connection ~ 6800 2100
+$Comp
+L Device:C C3
+U 1 1 61D523AF
+P 7300 2250
+F 0 "C3" H 7415 2296 50  0000 L CNN
+F 1 "1n" H 7415 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7338 2100 50  0001 C CNN
+F 3 "~" H 7300 2250 50  0001 C CNN
+	1    7300 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7300 2100
+Wire Wire Line
+	7300 2100 6800 2100
+$Comp
+L power:GND #PWR07
+U 1 1 61D52893
+P 7300 2400
+F 0 "#PWR07" H 7300 2150 50  0001 C CNN
+F 1 "GND" H 7305 2227 50  0001 C CNN
+F 2 "" H 7300 2400 50  0001 C CNN
+F 3 "" H 7300 2400 50  0001 C CNN
+	1    7300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61D53561
+P 6800 3250
+F 0 "#PWR06" H 6800 3000 50  0001 C CNN
+F 1 "GND" H 6805 3077 50  0001 C CNN
+F 2 "" H 6800 3250 50  0001 C CNN
+F 3 "" H 6800 3250 50  0001 C CNN
+	1    6800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 61D54618
+P 4150 3750
+F 0 "#PWR02" H 4150 3500 50  0001 C CNN
+F 1 "GND" H 4155 3577 50  0001 C CNN
+F 2 "" H 4150 3750 50  0001 C CNN
+F 3 "" H 4150 3750 50  0001 C CNN
+	1    4150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 61D56806
+P 5250 2250
+F 0 "C1" H 5365 2296 50  0000 L CNN
+F 1 "100n" H 5365 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5288 2100 50  0001 C CNN
+F 3 "~" H 5250 2250 50  0001 C CNN
+	1    5250 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 2100
+Wire Wire Line
+	5250 2100 4800 2100
+$Comp
+L power:GND #PWR04
+U 1 1 61D57250
+P 5250 2400
+F 0 "#PWR04" H 5250 2150 50  0001 C CNN
+F 1 "GND" H 5255 2227 50  0001 C CNN
+F 2 "" H 5250 2400 50  0001 C CNN
+F 3 "" H 5250 2400 50  0001 C CNN
+	1    5250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 61D5ACD4
+P 5850 2250
+F 0 "C2" H 5968 2296 50  0000 L CNN
+F 1 "47µ" H 5968 2205 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D" H 5888 2100 50  0001 C CNN
+F 3 "~" H 5850 2250 50  0001 C CNN
+	1    5850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 61D5B591
+P 5850 2400
+F 0 "#PWR05" H 5850 2150 50  0001 C CNN
+F 1 "GND" H 5855 2227 50  0001 C CNN
+F 2 "" H 5850 2400 50  0001 C CNN
+F 3 "" H 5850 2400 50  0001 C CNN
+	1    5850 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 2100
+Wire Wire Line
+	5850 2100 5250 2100
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 61D647F4
+P 5300 1700
+F 0 "J1" H 5272 1678 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 5272 1633 50  0001 R CNN
+F 2 "" H 5300 1700 50  0001 C CNN
+F 3 "~" H 5300 1700 50  0001 C CNN
+	1    5300 1700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2650 4900 2650
+Wire Wire Line
+	4900 2650 4900 1800
+Wire Wire Line
+	4900 1800 5100 1800
+Wire Wire Line
+	5100 1700 4800 1700
+Wire Wire Line
+	4800 1700 4800 2100
+Connection ~ 4800 2100
+Wire Wire Line
+	4800 2100 4150 2100
+$Comp
+L power:GND #PWR03
+U 1 1 61D674DA
+P 4650 1700
+F 0 "#PWR03" H 4650 1450 50  0001 C CNN
+F 1 "GND" H 4655 1527 50  0001 C CNN
+F 2 "" H 4650 1700 50  0001 C CNN
+F 3 "" H 4650 1700 50  0001 C CNN
+	1    4650 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1600 4650 1600
+Wire Wire Line
+	4650 1600 4650 1700
+Text Notes 5150 1900 0    50   ~ 0
+UPDI
+$Comp
+L Sensor_Humidity:SHT30-DIS U1
+U 1 1 61D72BB4
+P 2300 2250
+F 0 "U1" H 1850 2750 50  0000 C CNN
+F 1 "SHT30-DIS" H 2000 2650 50  0000 C CNN
+F 2 "Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm" H 2300 2300 50  0001 C CNN
+F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" H 2300 2300 50  0001 C CNN
+	1    2300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2750 3000 2750
+Wire Wire Line
+	3000 2750 3000 2150
+Wire Wire Line
+	3000 2150 2700 2150
+Wire Wire Line
+	3550 2650 3100 2650
+Wire Wire Line
+	3100 2650 3100 2250
+Wire Wire Line
+	3100 2250 2700 2250
+$Comp
+L power:GND #PWR01
+U 1 1 61D7A539
+P 2300 2550
+F 0 "#PWR01" H 2300 2300 50  0001 C CNN
+F 1 "GND" H 2305 2377 50  0001 C CNN
+F 2 "" H 2300 2550 50  0001 C CNN
+F 3 "" H 2300 2550 50  0001 C CNN
+	1    2300 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1950 2300 1800
+Wire Wire Line
+	2300 1800 4150 1800
+Wire Wire Line
+	4150 1800 4150 2100
+Connection ~ 4150 2100
+$EndSCHEMATC
