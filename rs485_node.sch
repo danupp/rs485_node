@@ -287,45 +287,51 @@ Wire Wire Line
 	4650 1600 4650 1700
 Text Notes 5150 1900 0    50   ~ 0
 UPDI
-$Comp
-L Sensor_Humidity:SHT30-DIS U1
-U 1 1 61D72BB4
-P 2300 2250
-F 0 "U1" H 1850 2750 50  0000 C CNN
-F 1 "SHT30-DIS" H 2000 2650 50  0000 C CNN
-F 2 "Sensor_Humidity:Sensirion_DFN-8-1EP_2.5x2.5mm_P0.5mm_EP1.1x1.7mm" H 2300 2300 50  0001 C CNN
-F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Datasheets/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf" H 2300 2300 50  0001 C CNN
-	1    2300 2250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3550 2750 3000 2750
 Wire Wire Line
 	3000 2750 3000 2150
 Wire Wire Line
-	3000 2150 2700 2150
-Wire Wire Line
 	3550 2650 3100 2650
 Wire Wire Line
 	3100 2650 3100 2250
-Wire Wire Line
-	3100 2250 2700 2250
 $Comp
 L power:GND #PWR01
 U 1 1 61D7A539
-P 2300 2550
-F 0 "#PWR01" H 2300 2300 50  0001 C CNN
-F 1 "GND" H 2305 2377 50  0001 C CNN
-F 2 "" H 2300 2550 50  0001 C CNN
-F 3 "" H 2300 2550 50  0001 C CNN
-	1    2300 2550
+P 2150 2350
+F 0 "#PWR01" H 2150 2100 50  0001 C CNN
+F 1 "GND" H 2155 2177 50  0001 C CNN
+F 2 "" H 2150 2350 50  0001 C CNN
+F 3 "" H 2150 2350 50  0001 C CNN
+	1    2150 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 1950 2300 1800
-Wire Wire Line
-	2300 1800 4150 1800
-Wire Wire Line
 	4150 1800 4150 2100
 Connection ~ 4150 2100
+$Comp
+L rs485_node:SHT40 U1
+U 1 1 61E16A76
+P 2600 2200
+F 0 "U1" H 2675 2515 50  0000 C CNN
+F 1 "SHT40" H 2675 2424 50  0000 C CNN
+F 2 "SHT40:SHT40" H 2600 2200 50  0001 C CNN
+F 3 "" H 2600 2200 50  0001 C CNN
+	1    2600 2200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2150 3000 2150
+Wire Wire Line
+	3100 2250 2850 2250
+Wire Wire Line
+	2200 2150 2100 2150
+Wire Wire Line
+	2100 2150 2100 1800
+Wire Wire Line
+	2100 1800 4150 1800
+Wire Wire Line
+	2150 2350 2150 2250
+Wire Wire Line
+	2150 2250 2200 2250
 $EndSCHEMATC
