@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name SHT40)(type KiCad)(uri ${KIPRJMOD})(options "")(descr ""))
+  (lib (name rs485_node)(type KiCad)(uri ${KIPRJMOD}/rs485_node.pretty)(options "")(descr ""))
 )
