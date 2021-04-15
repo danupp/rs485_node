@@ -28,8 +28,8 @@ $Comp
 L Interface_UART:ST485EBDR U3
 U 1 1 61D42045
 P 7700 3050
-F 0 "U3" H 7150 3550 50  0000 C CNN
-F 1 "ST485EBDR" H 7300 3450 50  0000 C CNN
+F 0 "U3" H 7975 3550 50  0000 C CNN
+F 1 "ST485EBDR" H 8050 3450 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7700 2150 50  0001 C CNN
 F 3 "http://www.st.com/resource/en/datasheet/st485eb.pdf" H 7700 3100 50  0001 C CNN
 	1    7700 3050
@@ -102,7 +102,7 @@ Wire Wire Line
 Wire Wire Line
 	7700 2650 7700 2400
 Wire Wire Line
-	7700 2400 6750 2400
+	7700 2400 7250 2400
 $Comp
 L Device:Ferrite_Bead_Small FB1
 U 1 1 61D4F800
@@ -391,17 +391,6 @@ Wire Wire Line
 Wire Wire Line
 	7750 1750 7950 1750
 Connection ~ 7950 1750
-$Comp
-L Switch:SW_DIP_x03 SW1
-U 1 1 61E50E3F
-P 1050 3650
-F 0 "SW1" H 1050 4117 50  0000 C CNN
-F 1 "SW_DIP_x03" H 1050 4026 50  0000 C CNN
-F 2 "Package_DIP:SMDIP-6_W7.62mm" H 1050 3650 50  0001 C CNN
-F 3 "~" H 1050 3650 50  0001 C CNN
-	1    1050 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2400 3150 2950 3150
 Wire Wire Line
@@ -412,25 +401,6 @@ Wire Wire Line
 	4350 4450 4350 3250
 Wire Wire Line
 	4350 3250 4150 3250
-$Comp
-L power:GND #PWR012
-U 1 1 61E6126A
-P 750 3750
-F 0 "#PWR012" H 750 3500 50  0001 C CNN
-F 1 "GND" H 755 3577 50  0001 C CNN
-F 2 "" H 750 3750 50  0001 C CNN
-F 3 "" H 750 3750 50  0001 C CNN
-	1    750  3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	750  3750 750  3650
-Wire Wire Line
-	750  3650 750  3550
-Connection ~ 750  3650
-Wire Wire Line
-	750  3450 750  3550
-Connection ~ 750  3550
 $Comp
 L Device:R R6
 U 1 1 61E6D8E4
@@ -928,24 +898,15 @@ F 3 "" H 2000 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 3650 2000 3650
-Wire Wire Line
-	1350 3550 1750 3550
-Wire Wire Line
-	1350 3450 1500 3450
-Wire Wire Line
 	1500 3800 1500 3450
-Connection ~ 1500 3450
 Wire Wire Line
 	1500 3450 2300 3450
 Wire Wire Line
 	1750 3800 1750 3550
-Connection ~ 1750 3550
 Wire Wire Line
 	1750 3550 2500 3550
 Wire Wire Line
 	2000 3800 2000 3650
-Connection ~ 2000 3650
 Wire Wire Line
 	2000 3650 2400 3650
 $Comp
@@ -1052,4 +1013,29 @@ Wire Wire Line
 Wire Wire Line
 	5600 5550 6350 5550
 Connection ~ 5600 5550
+$Comp
+L Device:C C7
+U 1 1 624A7311
+P 7250 2550
+F 0 "C7" H 7365 2596 50  0000 L CNN
+F 1 "100n" H 7365 2505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7288 2400 50  0001 C CNN
+F 3 "~" H 7250 2550 50  0001 C CNN
+	1    7250 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 7250 2400
+Wire Wire Line
+	7250 2400 6750 2400
+$Comp
+L power:GND #PWR027
+U 1 1 624A84CD
+P 7250 2700
+F 0 "#PWR027" H 7250 2450 50  0001 C CNN
+F 1 "GND" H 7255 2527 50  0001 C CNN
+F 2 "" H 7250 2700 50  0001 C CNN
+F 3 "" H 7250 2700 50  0001 C CNN
+	1    7250 2700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
